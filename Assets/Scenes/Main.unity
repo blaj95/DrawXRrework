@@ -311,6 +311,8 @@ GameObject:
   - component: {fileID: 1232782818}
   - component: {fileID: 1232782817}
   - component: {fileID: 1232782816}
+  - component: {fileID: 1232782820}
+  - component: {fileID: 1232782819}
   m_Layer: 0
   m_Name: RightHandObject
   m_TagString: Untagged
@@ -384,6 +386,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1232782814}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1232782819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232782814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2007a8ddbb32f5847aff8cde04eaf76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonA: 1
+  color1: {r: 0.9485294, g: 0.2859537, b: 0.2859537, a: 0}
+  color2: {r: 0.0573097, g: 0.7794118, b: 0.2714503, a: 0}
+  color3: {r: 0.1835532, g: 0.3844671, b: 0.71323526, a: 0}
+--- !u!114 &1232782820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232782814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab8d203a79ac3b4db22bf8c7909f8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1232782814}
+  lineMaterial: {fileID: 2100000, guid: 1b59b7307417e8746952d6e98eee6953, type: 2}
+  width: 0.01
+  button: 4194304
 --- !u!1001 &1812170257
 Prefab:
   m_ObjectHideFlags: 0
