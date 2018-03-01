@@ -28,6 +28,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class OVRGrabber : MonoBehaviour
 {
+    //mycode
+    public GameObject grabgroup;
+    private Rigidbody grabRig;
+
     // Grip trigger thresholds for picking up objects, with some hysteresis.
     public float grabBegin = 0.55f;
     public float grabEnd = 0.35f;
@@ -213,6 +217,8 @@ public class OVRGrabber : MonoBehaviour
 
     protected virtual void GrabBegin()
     {
+        grabRig = grabgroup.GetComponent<Rigidbody>();
+        grabRig.isKinematic = false;
         float closestMagSq = float.MaxValue;
 		OVRGrabbable closestGrabbable = null;
         Collider closestGrabbableCollider = null;
@@ -325,6 +331,8 @@ public class OVRGrabber : MonoBehaviour
 
     protected void GrabEnd()
     {
+        grabRig = grabgroup.GetComponent<Rigidbody>();
+        grabRig.isKinematic = true;
         if (m_grabbedObj != null)
         {
 			OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(m_controller), orientation = OVRInput.GetLocalControllerRotation(m_controller) };

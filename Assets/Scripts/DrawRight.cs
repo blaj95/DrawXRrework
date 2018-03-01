@@ -8,6 +8,7 @@ public class DrawRight : MonoBehaviour {
     public Material lineMaterial;
     public float width;
     public OVRInput.Button button;
+    public List<GameObject> lines;
 
     private LineRenderer currLine;
     private int numClicks = 0;
@@ -24,7 +25,9 @@ public class DrawRight : MonoBehaviour {
         {
 
             GameObject stroke = new GameObject("stroke");
-
+            stroke.tag = "stroke";
+            lines.Add(stroke);
+            stroke.transform.parent = GameObject.FindGameObjectWithTag("Grouping").transform;
             stroke.AddComponent<MeshFilter>();
             stroke.AddComponent<MeshRenderer>();
 
