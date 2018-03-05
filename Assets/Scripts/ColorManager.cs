@@ -14,7 +14,7 @@ public class ColorManager : MonoBehaviour
     public Color color2;
     public Color color3;
 
-    //private PhotonView photonView;
+    private PhotonView photonView;
 
     void Awake()
     {
@@ -39,7 +39,7 @@ public class ColorManager : MonoBehaviour
     void Start()
     {
         color = color1;
-        //photonView = PhotonView.Get(this);
+        photonView = PhotonView.Get(this);
     }
 
     void Update()
@@ -47,7 +47,7 @@ public class ColorManager : MonoBehaviour
         if ((OVRInput.GetUp(buttonA)))
         {
 
-           // photonView.RPC("ChangeColor", PhotonTargets.Others, null);
+           photonView.RPC("ChangeColor", PhotonTargets.All, 0);
 
             if (color == color1)
             {
@@ -65,12 +65,9 @@ public class ColorManager : MonoBehaviour
         }
     }
 
-    public Color GetCurrentColor()
-    {
-        return this.color;
-    }
+    
 
-    //[PunRPC]
+    [PunRPC]
     public void ChangeColor()
     {
         if (color == color1)
@@ -85,5 +82,11 @@ public class ColorManager : MonoBehaviour
         {
             color = color1;
         }
+    }
+
+    [PunRPC]
+    public Color GetCurrentColor()
+    {
+        return this.color;
     }
 }
