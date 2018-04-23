@@ -68,7 +68,7 @@ public class DrawRight : Photon.MonoBehaviour {
             currLine.setWidth(width);
 
             numClicks++;
-            photonView.RPC("AddStroke", PhotonTargets.All, 0);
+            photonView.RPC("AddStroke", PhotonTargets.All);
         }
         else if (OVRInput.Get(button) && numClicks > 0)
         {
@@ -85,19 +85,19 @@ public class DrawRight : Photon.MonoBehaviour {
             currLine = null;
 
 
-            photonView.RPC("SetNull", PhotonTargets.All, 0);
+            photonView.RPC("SetNull", PhotonTargets.All);
         }
         if (currLine != null)
         {
             currLine.lineMaterial = GetCurrentColor();
 
-            photonView.RPC("SetColor", PhotonTargets.AllBuffered, null);
+            photonView.RPC("SetColor", PhotonTargets.AllBuffered);
         }
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryThumbstickUp))
         {
             width = width + 0.01f;
-            photonView.RPC("IncreaseWidth", PhotonTargets.All, 0);
+            photonView.RPC("IncreaseWidth", PhotonTargets.All);
         }
         else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))
         {
@@ -106,14 +106,14 @@ public class DrawRight : Photon.MonoBehaviour {
             {
                 width = 0.01f;
             }
-            photonView.RPC("DecreaseWidth", PhotonTargets.All, 0);
+            photonView.RPC("DecreaseWidth", PhotonTargets.All);
         }
 
 
         if ((OVRInput.GetUp(buttonA)))
         {
             Debug.Log("CHANGE");
-            photonView.RPC("ChangeColor", PhotonTargets.AllBuffered, null);
+            photonView.RPC("ChangeColor", PhotonTargets.AllBuffered);
 
             if (color == color1)
             {
@@ -146,6 +146,7 @@ public class DrawRight : Photon.MonoBehaviour {
     public void AddStroke()
     {
         GameObject stroke = new GameObject("stroke");
+        
         stroke.tag = "stroke";
         lines.Add(stroke);
         //stroke.transform.parent = GameObject.FindGameObjectWithTag("Grouping").transform;
@@ -153,6 +154,7 @@ public class DrawRight : Photon.MonoBehaviour {
         stroke.AddComponent<MeshRenderer>();
         stroke.AddComponent<Rigidbody>();
         stroke.AddComponent<BoxCollider>();
+        stroke.AddComponent<PhotonView>();
         //col = stroke.AddComponent<BoxCollider>();
         //col.center = stroke.gameObject.transform.localPosition;
         rig = stroke.GetComponent<Rigidbody>();
