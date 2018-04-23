@@ -5,6 +5,7 @@ using UnityEngine;
 public class NetworkDisable : Photon.MonoBehaviour {
 
     public Camera playerCam;
+    public GameObject[] disableObjs;
 	// Use this for initialization
 	void Start ()
     {
@@ -16,11 +17,18 @@ public class NetworkDisable : Photon.MonoBehaviour {
         if (!photonView.isMine)
         {
             playerCam.enabled = false;
+            foreach(GameObject obj in disableObjs)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        if (!photonView.isMine)
+        {
+            playerCam.enabled = false;
+        }
+    }
 }

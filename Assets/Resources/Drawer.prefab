@@ -574,6 +574,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 20818296631089780}
+  disableObjs:
+  - {fileID: 1812401373152822}
+  - {fileID: 1861248993502648}
+  - {fileID: 1342874184353424}
 --- !u!114 &114250559421703982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -743,8 +747,8 @@ MonoBehaviour:
   - {fileID: 114609255331876500}
   - {fileID: 4063174564103960}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 1
+  instantiationId: 1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114767414194105090
