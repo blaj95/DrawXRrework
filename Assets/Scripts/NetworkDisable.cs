@@ -15,7 +15,7 @@ public class NetworkDisable : Photon.MonoBehaviour {
     {
         if (!photonView.isMine)
         {
-
+            playerCam.enabled = false;
         }
     }
 
