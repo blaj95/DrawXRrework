@@ -179,8 +179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4008840063173804}
   - component: {fileID: 114881685977488264}
-  - component: {fileID: 114451405067314468}
-  - component: {fileID: 114836570181239644}
   m_Layer: 0
   m_Name: RightHandAnchor
   m_TagString: Untagged
@@ -707,33 +705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmoothingDelay: 5
---- !u!114 &114451405067314468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1923140000261714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  OwnerShipWasTransfered: 0
-  prefixBackup: -1
-  synchronization: 3
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  - {fileID: 114836570181239644}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 4
-  instantiationId: 4
-  currentMasterID: -1
-  isRuntimeInstantiated: 0
 --- !u!114 &114483715253684820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -769,8 +740,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 114483715253684820}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 3
-  instantiationId: 3
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114601909862143346
@@ -794,10 +765,10 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 114368056116718388}
-  - {fileID: 4063174564103960}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 2
-  instantiationId: 2
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114748897978368470
@@ -823,8 +794,8 @@ MonoBehaviour:
   - {fileID: 114250559421703982}
   - {fileID: 114953877123015008}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 1
-  instantiationId: 1
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114767414194105090
@@ -846,18 +817,6 @@ MonoBehaviour:
   grabMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &114836570181239644
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1923140000261714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SmoothingDelay: 5
 --- !u!114 &114881685977488264
 MonoBehaviour:
   m_ObjectHideFlags: 1
