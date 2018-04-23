@@ -53,7 +53,7 @@ public class NetworkManager : MonoBehaviour
         }
        else if (isSpectator)
        {
-            PhotonNetwork.Instantiate("ARPlayer", new Vector3(0, 0, 7.5f), new Quaternion(0, 180, 0, 0),0);
+            PhotonNetwork.Instantiate("ARPlayer", new Vector3(0, 0, 3f), new Quaternion(0, 180, 0, 0),0);
        }
        else
        {
