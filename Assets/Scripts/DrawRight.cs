@@ -168,7 +168,7 @@ public class DrawRight : Photon.MonoBehaviour {
         //col = stroke.AddComponent<BoxCollider>();
         //col.center = stroke.gameObject.transform.localPosition;
         rig = stroke.GetComponent<Rigidbody>();
-        //rig.isKinematic = true;
+        rig.isKinematic = true;
         rig.useGravity = false;
         currLine = stroke.AddComponent<LineRenderer>();
         currLine.lineMaterial = new Material(lineMaterial);
