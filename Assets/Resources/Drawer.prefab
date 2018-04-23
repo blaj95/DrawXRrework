@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4295356388798020}
   - component: {fileID: 114017468165048466}
   - component: {fileID: 114328435053548528}
-  - component: {fileID: 114692162465946300}
   - component: {fileID: 114250559421703982}
   - component: {fileID: 114748897978368470}
+  - component: {fileID: 114092601477571442}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -562,6 +562,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
+--- !u!114 &114092601477571442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283986438969546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4dec4ae7bc2374d960eb8da0123e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 20818296631089780}
 --- !u!114 &114250559421703982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -707,20 +719,6 @@ MonoBehaviour:
   color2: {fileID: 2100000, guid: 1cc48bd2bb0740b4f968c3af2482b755, type: 2}
   color3: {fileID: 2100000, guid: 12dffe5ff35fa494288b8da3bcd0c0e4, type: 2}
   color: {fileID: 0}
---- !u!114 &114692162465946300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283986438969546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c767d3317c27b04690b8baa02d49ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 0}
-  leftHand: {fileID: 1834252163613470}
-  rightHand: {fileID: 1573654401112358}
 --- !u!114 &114748897978368470
 MonoBehaviour:
   m_ObjectHideFlags: 1
