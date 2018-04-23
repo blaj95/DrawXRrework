@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 114609255331876500}
   - component: {fileID: 114767414194105090}
   - component: {fileID: 54523431547839280}
-  - component: {fileID: 114283475385404838}
   m_Layer: 0
   m_Name: RightHandObject
   m_TagString: Rhand
@@ -643,17 +642,6 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &114283475385404838
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1573654401112358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49dd5bd90117e34b959be920588299d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114328435053548528
 MonoBehaviour:
   m_ObjectHideFlags: 1

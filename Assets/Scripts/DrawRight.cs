@@ -21,13 +21,13 @@ public class DrawRight : Photon.MonoBehaviour {
     private int numClicks = 0;
     private Rigidbody rig;
     private BoxCollider col;
-    private PhotonView photonView;
+    public PhotonView pv;
 
     // Use this for initialization
     void Start ()
     {
 
-        photonView = PhotonView.Get(player);
+        
         //photonView.RPC("setColor", PhotonTargets.AllBuffered, null);
         
     }
@@ -37,16 +37,21 @@ public class DrawRight : Photon.MonoBehaviour {
         //photonView.RPC("setColor", PhotonTargets.AllBuffered, null);
 
         color = color1;
+       
     }
 
     // Update is called once per frame
     void Update ()
     {
-
+        //if(pv.isMine)
+        //pv = player.GetComponent<PhotonView>();
         //if (RHandInstance.instance != null)
         //{
         //    controller = RHandInstance.instance.gameObject;
         //}
+        player = GameObject.Find("Drawer(Clone)");
+        if (player.GetComponent<PhotonView>().isMine)
+            pv = player.GetComponent<PhotonView>();
 
         if (OVRInput.Get(button) && numClicks == 0)
         {
@@ -58,6 +63,7 @@ public class DrawRight : Photon.MonoBehaviour {
             stroke.AddComponent<MeshRenderer>();
             stroke.AddComponent<Rigidbody>();
             stroke.AddComponent<BoxCollider>();
+            stroke.AddComponent<PhotonView>();
             //col = stroke.AddComponent<BoxCollider>();
             //col.center = stroke.gameObject.transform.localPosition;
             rig = stroke.GetComponent<Rigidbody>();
@@ -68,14 +74,14 @@ public class DrawRight : Photon.MonoBehaviour {
             currLine.setWidth(width);
 
             numClicks++;
-            photonView.RPC("AddStroke", PhotonTargets.All);
+            pv.RPC("AddStroke", PhotonTargets.All);
         }
         else if (OVRInput.Get(button) && numClicks > 0)
         {
             currLine.AddPoint(controller.transform.position);
 
 
-            photonView.RPC("DrawLine", PhotonTargets.All, controller.transform.position);
+            pv.RPC("DrawLine", PhotonTargets.All, controller.transform.position);
 
             numClicks++;
         }
@@ -85,19 +91,19 @@ public class DrawRight : Photon.MonoBehaviour {
             currLine = null;
 
 
-            photonView.RPC("SetNull", PhotonTargets.All);
+            pv.RPC("SetNull", PhotonTargets.All);
         }
         if (currLine != null)
         {
             currLine.lineMaterial = GetCurrentColor();
 
-            photonView.RPC("SetColor", PhotonTargets.AllBuffered);
+            pv.RPC("SetColor", PhotonTargets.AllBuffered);
         }
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryThumbstickUp))
         {
             width = width + 0.01f;
-            photonView.RPC("IncreaseWidth", PhotonTargets.All);
+            pv.RPC("IncreaseWidth", PhotonTargets.All);
         }
         else if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))
         {
@@ -106,14 +112,14 @@ public class DrawRight : Photon.MonoBehaviour {
             {
                 width = 0.01f;
             }
-            photonView.RPC("DecreaseWidth", PhotonTargets.All);
+            pv.RPC("DecreaseWidth", PhotonTargets.All);
         }
 
 
         if ((OVRInput.GetUp(buttonA)))
         {
             Debug.Log("CHANGE");
-            photonView.RPC("ChangeColor", PhotonTargets.AllBuffered);
+            pv.RPC("ChangeColor", PhotonTargets.AllBuffered);
 
             if (color == color1)
             {
