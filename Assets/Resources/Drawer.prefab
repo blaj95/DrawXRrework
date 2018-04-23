@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114250559421703982}
   - component: {fileID: 114748897978368470}
   - component: {fileID: 114092601477571442}
+  - component: {fileID: 114953877123015008}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -104,7 +105,6 @@ GameObject:
   - component: {fileID: 33619126296083242}
   - component: {fileID: 135155980853122758}
   - component: {fileID: 23603264441050352}
-  - component: {fileID: 114609255331876500}
   - component: {fileID: 114767414194105090}
   - component: {fileID: 54523431547839280}
   m_Layer: 0
@@ -689,28 +689,6 @@ MonoBehaviour:
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
   AllowRecenter: 1
---- !u!114 &114609255331876500
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1573654401112358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab8d203a79ac3b4db22bf8c7909f8da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1573654401112358}
-  player: {fileID: 1283986438969546}
-  lineMaterial: {fileID: 2100000, guid: 1b59b7307417e8746952d6e98eee6953, type: 2}
-  width: 0.01
-  button: 4194304
-  lines: []
-  buttonA: 1
-  color1: {fileID: 2100000, guid: 9f50dbd3e443c9049a3fb71accf24224, type: 2}
-  color2: {fileID: 2100000, guid: 1cc48bd2bb0740b4f968c3af2482b755, type: 2}
-  color3: {fileID: 2100000, guid: 12dffe5ff35fa494288b8da3bcd0c0e4, type: 2}
-  color: {fileID: 0}
 --- !u!114 &114748897978368470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -732,7 +710,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 114250559421703982}
-  - {fileID: 114609255331876500}
+  - {fileID: 114953877123015008}
   - {fileID: 4063174564103960}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 1
@@ -769,6 +747,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8f7e2cacaf19141b41eb0f7db9172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114953877123015008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283986438969546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab8d203a79ac3b4db22bf8c7909f8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  player: {fileID: 0}
+  lineMaterial: {fileID: 2100000, guid: 1b59b7307417e8746952d6e98eee6953, type: 2}
+  width: 0.01
+  button: 4194304
+  lines: []
+  buttonA: 1
+  color1: {fileID: 2100000, guid: 9f50dbd3e443c9049a3fb71accf24224, type: 2}
+  color2: {fileID: 2100000, guid: 1cc48bd2bb0740b4f968c3af2482b755, type: 2}
+  color3: {fileID: 2100000, guid: 12dffe5ff35fa494288b8da3bcd0c0e4, type: 2}
+  color: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!114 &114997279843767388
 MonoBehaviour:
   m_ObjectHideFlags: 1

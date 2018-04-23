@@ -51,7 +51,11 @@ public class DrawRight : Photon.MonoBehaviour {
         //}
         player = GameObject.Find("Drawer(Clone)");
         if (player.GetComponent<PhotonView>().isMine)
+        {
             pv = player.GetComponent<PhotonView>();
+            controller = GameObject.Find("Drawer(Clone)/TrackingSpace/RightHandAnchor/RightHandObject");
+        }
+            
 
         if (OVRInput.Get(button) && numClicks == 0)
         {
