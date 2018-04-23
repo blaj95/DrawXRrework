@@ -727,11 +727,11 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 4008840063173804}
+  - {fileID: 0}
   - {fileID: 114836570181239644}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 2
-  instantiationId: 2
+  viewIdField: 4
+  instantiationId: 4
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114483715253684820
@@ -766,7 +766,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 4241687551091534}
+  - {fileID: 0}
   - {fileID: 114483715253684820}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 3
@@ -796,8 +796,8 @@ MonoBehaviour:
   - {fileID: 114368056116718388}
   - {fileID: 4063174564103960}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 4
-  instantiationId: 4
+  viewIdField: 2
+  instantiationId: 2
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114748897978368470
@@ -822,9 +822,6 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114250559421703982}
   - {fileID: 114953877123015008}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 1
   instantiationId: 1
