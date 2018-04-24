@@ -88,6 +88,8 @@ public class DrawRight : Photon.MonoBehaviour {
             currLine.setWidth(width);
 
             numClicks++;
+
+            if(!photonView.isMine)
             pv.RPC("AddStroke", PhotonTargets.All);
         }
         else if (OVRInput.Get(button) && numClicks > 0)

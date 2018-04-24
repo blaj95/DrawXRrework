@@ -20,6 +20,7 @@ public class CallEraser : MonoBehaviour {
     {
         if (other.gameObject.tag == "stroke")
         {
+            Debug.Log("Stroke");
             erase.Erase(other);
         }
         

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eraser : MonoBehaviour {
+public class Eraser : Photon.MonoBehaviour {
 
     public GameObject eraser;
     public GameObject[] strokes;
@@ -30,14 +30,26 @@ public class Eraser : MonoBehaviour {
         else
         {
             eraser.SetActive(false);
-            rend.convex = false;
+            rend.convex = true;
         }
     }
 
     public void Erase(Collision other)
     { 
-            Debug.Log("ERASE");
-            Destroy(other.gameObject);
+        Debug.Log("ERASE");
+        photonView.RPC("DestroyOtherStroke", PhotonTargets.All, other.gameObject.GetPhotonView().viewID);
+        Destroy(other.gameObject);
+    }
+    
+    [PunRPC]
+    public void DestroyOtherStroke(int id)
+    {
+        GameObject obj = PhotonView.Find(id).gameObject;
+        
+        if(PhotonNetwork.isMasterClient)
+        {
+            Destroy(obj);
+        }
         
     }
 }
