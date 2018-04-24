@@ -60,21 +60,31 @@ public class DrawRight : Photon.MonoBehaviour {
         if (OVRInput.Get(button) && numClicks == 0)
         {
             GameObject stroke = new GameObject("stroke");
+
             stroke.tag = "stroke";
             lines.Add(stroke);
             //stroke.transform.parent = GameObject.FindGameObjectWithTag("Grouping").transform;
-            stroke.AddComponent<MeshFilter>();
-            stroke.AddComponent<MeshRenderer>();
+            MeshFilter filter = stroke.AddComponent<MeshFilter>();
+            MeshRenderer mesh = stroke.AddComponent<MeshRenderer>();
             stroke.AddComponent<Rigidbody>();
-            stroke.AddComponent<BoxCollider>();
+            MeshCollider box = stroke.AddComponent<MeshCollider>();
             stroke.AddComponent<PhotonView>();
+            //col = stroke.AddComponent<BoxCollider>();
+            //col.center = stroke.gameObject.transform.localPosition;
+            MeshRenderer rend = stroke.GetComponent<MeshRenderer>();
+            box.sharedMesh = null;
+            box.convex = true;
+           
+            box.sharedMesh = filter.mesh;
+            
+            
             //col = stroke.AddComponent<BoxCollider>();
             //col.center = stroke.gameObject.transform.localPosition;
             rig = stroke.GetComponent<Rigidbody>();
             rig.isKinematic = true;
             rig.useGravity = false;
             currLine = stroke.AddComponent<LineRenderer>();
-            currLine.lineMaterial = GetCurrentColor();
+            currLine.lineMaterial = new Material(lineMaterial);
             currLine.setWidth(width);
 
             numClicks++;
@@ -156,15 +166,24 @@ public class DrawRight : Photon.MonoBehaviour {
     public void AddStroke()
     {
         GameObject stroke = new GameObject("stroke");
-        
+
         stroke.tag = "stroke";
         lines.Add(stroke);
         //stroke.transform.parent = GameObject.FindGameObjectWithTag("Grouping").transform;
-        stroke.AddComponent<MeshFilter>();
-        stroke.AddComponent<MeshRenderer>();
+        MeshFilter filter = stroke.AddComponent<MeshFilter>();
+        MeshRenderer mesh = stroke.AddComponent<MeshRenderer>();
         stroke.AddComponent<Rigidbody>();
-        stroke.AddComponent<BoxCollider>();
+        MeshCollider box = stroke.AddComponent<MeshCollider>();
         stroke.AddComponent<PhotonView>();
+        //col = stroke.AddComponent<BoxCollider>();
+        //col.center = stroke.gameObject.transform.localPosition;
+        MeshRenderer rend = stroke.GetComponent<MeshRenderer>();
+        box.sharedMesh = null;
+        box.convex = true;
+        
+        box.sharedMesh = filter.mesh;
+        
+
         //col = stroke.AddComponent<BoxCollider>();
         //col.center = stroke.gameObject.transform.localPosition;
         rig = stroke.GetComponent<Rigidbody>();
@@ -175,8 +194,6 @@ public class DrawRight : Photon.MonoBehaviour {
         currLine.setWidth(width);
 
         numClicks++;
-
-
     }
 
     [PunRPC]
