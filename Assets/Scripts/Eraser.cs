@@ -38,7 +38,7 @@ public class Eraser : Photon.MonoBehaviour {
     { 
         Debug.Log("ERASE");
         photonView.RPC("DestroyOtherStroke", PhotonTargets.All, other.gameObject.GetPhotonView().viewID);
-        Destroy(other.gameObject);
+        //Destroy(other.gameObject);
     }
     
     [PunRPC]
@@ -47,6 +47,10 @@ public class Eraser : Photon.MonoBehaviour {
         GameObject obj = PhotonView.Find(id).gameObject;
         
         if(PhotonNetwork.isMasterClient)
+        {
+            Destroy(obj);
+        }
+        else
         {
             Destroy(obj);
         }

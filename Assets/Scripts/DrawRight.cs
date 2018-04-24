@@ -89,7 +89,7 @@ public class DrawRight : Photon.MonoBehaviour {
 
             numClicks++;
 
-            if(!photonView.isMine)
+            
             pv.RPC("AddStroke", PhotonTargets.All);
         }
         else if (OVRInput.Get(button) && numClicks > 0)
@@ -182,9 +182,9 @@ public class DrawRight : Photon.MonoBehaviour {
         MeshRenderer rend = stroke.GetComponent<MeshRenderer>();
         box.sharedMesh = null;
         box.convex = true;
-        
+
         box.sharedMesh = filter.mesh;
-        
+
 
         //col = stroke.AddComponent<BoxCollider>();
         //col.center = stroke.gameObject.transform.localPosition;
