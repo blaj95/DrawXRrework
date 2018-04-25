@@ -52,4 +52,5 @@ MonoBehaviour:
   - GetCurrentColor
   - setColor
   - DestroyOtherStroke
+  - CorrectAnswer
   DisableAutoOpenWizard: 1

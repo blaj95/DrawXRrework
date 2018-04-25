@@ -8,6 +8,7 @@ TagManager:
   - Grouping
   - Rhand
   - Eraser
+  - CorrectText
   layers:
   - Default
   - TransparentFX
