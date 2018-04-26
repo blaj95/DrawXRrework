@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class GuessResponse : Photon.MonoBehaviour {
     public GameObject[] texts;
     public List<Text> arResponseText;
-	// Use this for initialization
+    public string incorrect = "NOOOOOPE!";
+    public string correct = "You got it!";
+    
+    // Use this for initialization
 	void Start ()
     {
 		
@@ -28,17 +31,17 @@ public class GuessResponse : Photon.MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space))
         {
-            photonView.RPC("CorrectAnswer", PhotonTargets.All);
+            photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
         }
         
 	}
 
     [PunRPC]
-    public void CorrectAnswer()
+    public void CorrectAnswer(string response)
     {
         foreach(Text te in arResponseText)
         {
-            te.text = "You got it!";
+            te.text = response;
         }
     }
 }
