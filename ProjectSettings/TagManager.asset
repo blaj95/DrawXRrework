@@ -9,6 +9,8 @@ TagManager:
   - Rhand
   - Eraser
   - CorrectText
+  - GotItButton
+  - WrongButton
   layers:
   - Default
   - TransparentFX

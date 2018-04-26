@@ -813,6 +813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts: []
   arResponseText: []
+  incorrect: NOOOOOPE!
+  correct: You got it!
 --- !u!114 &114328435053548528
 MonoBehaviour:
   m_ObjectHideFlags: 1
