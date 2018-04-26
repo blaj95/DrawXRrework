@@ -3222,7 +3222,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185162305}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3255,15 +3255,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 186846744}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.739, y: -0.51296943, z: 0.146}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -5.4890003, y: 2.992359, z: -3.5552309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1851750974}
   - {fileID: 980878145}
   - {fileID: 185162306}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1609419863}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &191480008
 GameObject:
@@ -9761,7 +9761,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593860991}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -12373,8 +12373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce543f9f9c6a94f932f63fd98acbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDrawer: 1
-  isSpectator: 0
+  isDrawer: 0
+  isSpectator: 1
   spawnArea: {fileID: 0}
   AutoConnect: 1
   Version: 1
@@ -23540,7 +23540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1609419863
 Transform:
   m_ObjectHideFlags: 0
@@ -23556,6 +23556,8 @@ Transform:
   - {fileID: 1012809918}
   - {fileID: 1592672588}
   - {fileID: 1162414549}
+  - {fileID: 2088723878}
+  - {fileID: 186846745}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28896,15 +28898,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088723877}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.59, y: -0.51296943, z: 0.128}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.8399999, y: 2.992359, z: -3.5732307}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1477068854}
   - {fileID: 30118177}
   - {fileID: 593860995}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1609419863}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2088989679
 GameObject:

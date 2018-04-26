@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 114092601477571442}
   - component: {fileID: 114953877123015008}
   - component: {fileID: 114099060740760290}
-  - component: {fileID: 114314999869980364}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -147,6 +146,7 @@ GameObject:
   - component: {fileID: 54523431547839280}
   - component: {fileID: 114601909862143346}
   - component: {fileID: 114368056116718388}
+  - component: {fileID: 114848349974094772}
   m_Layer: 0
   m_Name: RightHandObject
   m_TagString: Rhand
@@ -800,21 +800,6 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &114314999869980364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283986438969546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7d3eef1b00e7f4da7274db7d6f28de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texts: []
-  arResponseText: []
-  incorrect: NOOOOOPE!
-  correct: You got it!
 --- !u!114 &114328435053548528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1070,6 +1055,21 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114848349974094772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573654401112358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7d3eef1b00e7f4da7274db7d6f28de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts: []
+  arResponseText: []
+  incorrect: NOOOOOPE!
+  correct: You got it!
 --- !u!114 &114875055942932574
 MonoBehaviour:
   m_ObjectHideFlags: 1

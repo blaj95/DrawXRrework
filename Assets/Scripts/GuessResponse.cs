@@ -28,13 +28,23 @@ public class GuessResponse : Photon.MonoBehaviour {
                 arResponseText.Add(text);
                 
             }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
-        }
         
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "GotItButton")
+            photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
+
+        if (other.gameObject.tag == "WrongButton")
+            photonView.RPC("WrongAnswer", PhotonTargets.All, incorrect);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "GotItButton" || other.gameObject.tag == "WrongButton")
+            photonView.RPC("ClearARUI", PhotonTargets.All);
+    }
 
     [PunRPC]
     public void CorrectAnswer(string response)
@@ -42,6 +52,24 @@ public class GuessResponse : Photon.MonoBehaviour {
         foreach(Text te in arResponseText)
         {
             te.text = response;
+        }
+    }
+
+    [PunRPC]
+    public void WrongAnswer(string response)
+    {
+        foreach (Text te in arResponseText)
+        {
+            te.text = response;
+        }
+    }
+
+    [PunRPC]
+    public void ClearARUI()
+    {
+        foreach (Text te in arResponseText)
+        {
+            te.text = "";
         }
     }
 }

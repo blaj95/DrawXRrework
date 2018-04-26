@@ -53,4 +53,6 @@ MonoBehaviour:
   - setColor
   - DestroyOtherStroke
   - CorrectAnswer
+  - WrongAnswer
+  - ClearARUI
   DisableAutoOpenWizard: 1
