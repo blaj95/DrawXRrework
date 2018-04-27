@@ -11,6 +11,8 @@ TagManager:
   - CorrectText
   - GotItButton
   - WrongButton
+  - NameText
+  - playerName
   layers:
   - Default
   - TransparentFX

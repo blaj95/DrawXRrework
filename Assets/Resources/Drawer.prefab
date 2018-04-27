@@ -722,6 +722,7 @@ MonoBehaviour:
   - {fileID: 1812401373152822}
   - {fileID: 1861248993502648}
   - {fileID: 1342874184353424}
+  mySideObj: []
 --- !u!114 &114099060740760290
 MonoBehaviour:
   m_ObjectHideFlags: 1

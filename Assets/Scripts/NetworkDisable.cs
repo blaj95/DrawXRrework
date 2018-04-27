@@ -6,6 +6,8 @@ public class NetworkDisable : Photon.MonoBehaviour {
 
     public Camera playerCam;
     public GameObject[] disableObjs;
+
+    public GameObject[] mySideObj;
 	// Use this for initialization
 	void Start ()
     {
@@ -29,6 +31,17 @@ public class NetworkDisable : Photon.MonoBehaviour {
         if (!photonView.isMine)
         {
             playerCam.enabled = false;
+            foreach (GameObject obj in disableObjs)
+            {
+                obj.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject obj in mySideObj)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 }

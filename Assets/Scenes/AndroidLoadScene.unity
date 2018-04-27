@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: 
 --- !u!222 &13250847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -735,6 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Version: 1
+  playerName: {fileID: 0}
 --- !u!1 &1577546339
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +748,7 @@ GameObject:
   - component: {fileID: 1577546341}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: NameText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -760,7 +761,7 @@ RectTransform:
   m_GameObject: {fileID: 1577546339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.24526176, y: 0.24526165, z: 0.24526165}
   m_Children: []
   m_Father: {fileID: 2082906820}
   m_RootOrder: 1
@@ -791,7 +792,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 180
+    m_FontSize: 78
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

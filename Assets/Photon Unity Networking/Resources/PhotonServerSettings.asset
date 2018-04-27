@@ -55,4 +55,5 @@ MonoBehaviour:
   - CorrectAnswer
   - WrongAnswer
   - ClearARUI
+  - ShowName
   DisableAutoOpenWizard: 1
