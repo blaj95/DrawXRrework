@@ -19,10 +19,10 @@ public class SetName : Photon.MonoBehaviour {
         {
             _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
             _name.text = PhotonNetwork.playerName;
-            photonView.RPC("ShowName", PhotonTargets.Others);
+            
         }
-       
-	}
+        photonView.RPC("ShowName", PhotonTargets.Others);
+    }
 
     [PunRPC]
     public void ShowName()
