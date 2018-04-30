@@ -20,16 +20,6 @@ public class AndroidNetworkManager : Photon.PunBehaviour
         playerName = GameObject.FindGameObjectWithTag("NameText").GetComponent<Text>();
     }
 
-    public override void OnPhotonInstantiate(PhotonMessageInfo info)
-    {
-        name = new System.Text.StringBuilder()
-            .Append(photonView.owner.NickName)
-            .Append(" [")
-            .Append(photonView.viewID)
-            .Append("]")
-            .ToString();
-
-        BroadcastMessage("OnInstantiate", info, SendMessageOptions.DontRequireReceiver);
-    }
+   
 
 }
