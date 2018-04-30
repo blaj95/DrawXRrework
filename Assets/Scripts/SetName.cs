@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetName : Photon.MonoBehaviour {
+public class SetName : Photon.PunBehaviour {
     public Text _name;
     public CanvasRenderer rend;
 
@@ -20,18 +20,16 @@ public class SetName : Photon.MonoBehaviour {
       
     }
     // Update is called once per frame
-    void Update ()
+    public override void OnPhotonInstantiate(PhotonMessageInfo info)
     {
-        if (photonView.isMine)
-        {
-            _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
-            _name.text = PhotonNetwork.player.NickName;
-        }
-        else
-        {
-            _name.text = PhotonNetwork.player.NickName;
-        }
-        
+        name = new System.Text.StringBuilder()
+            .Append(photonView.owner.NickName)
+            .Append(" [")
+            .Append(photonView.viewID)
+            .Append("]")
+            .ToString();
+
+        BroadcastMessage("OnInstantiate", info, SendMessageOptions.DontRequireReceiver);
     }
 
     [PunRPC]
