@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 224222629189368908}
   - component: {fileID: 222100747332557302}
   - component: {fileID: 114613826857093056}
+  - component: {fileID: 114137496138275284}
   m_Layer: 5
   m_Name: Text
   m_TagString: playerName
@@ -256,6 +257,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339940269167030}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114137496138275284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928338808253596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da114c9b0a6510c4fabd4f7025bbb0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114297326698912794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,12 +283,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 114762619440764694}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
