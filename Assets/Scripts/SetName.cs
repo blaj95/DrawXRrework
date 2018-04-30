@@ -21,12 +21,9 @@ public class SetName : Photon.MonoBehaviour {
             photonView.RPC("ShowName", PhotonTargets.All);
 
         }
-        else
-        {
-            _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
-            _name.text = PhotonNetwork.playerName;
-        }
-        
+        _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
+        _name.text = PhotonNetwork.playerName;
+
     }
 
     [PunRPC]
