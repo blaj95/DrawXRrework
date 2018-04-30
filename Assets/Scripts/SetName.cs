@@ -23,9 +23,10 @@ public class SetName : Photon.MonoBehaviour {
         _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
         _name.text = PhotonNetwork.playerName;
         photonView.RPC("ShowName", PhotonTargets.Others);
-        if (photonView.isMine == false)
+        if (!photonView.isMine)
         {
-            _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
+            _name = GameObject.Find("ARPlayer(Clone)/Capsule/Canvas/Text").GetComponent<Text>();
+            _name.text = PhotonNetwork.player.NickName;
         }
     }
 
