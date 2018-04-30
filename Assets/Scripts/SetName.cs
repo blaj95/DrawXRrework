@@ -11,18 +11,17 @@ public class SetName : Photon.MonoBehaviour {
     {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        if (photonView.isMine)
-        {
-            _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
-            _name.text = PhotonNetwork.playerName;
-            photonView.RPC("ShowName", PhotonTargets.All);
 
-        }
-        
+    private void Awake()
+    {
+        _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
+        _name.text = PhotonNetwork.playerName;
+        photonView.RPC("ShowName", PhotonTargets.Others);
+    }
+    // Update is called once per frame
+    void Update ()
+    {
+       
 
     }
 
