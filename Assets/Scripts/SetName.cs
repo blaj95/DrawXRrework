@@ -17,12 +17,12 @@ public class SetName : Photon.MonoBehaviour {
     {
         if (photonView.isMine)
         {
-            
+            _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
+            _name.text = PhotonNetwork.playerName;
             photonView.RPC("ShowName", PhotonTargets.All);
 
         }
-        _name = GameObject.FindGameObjectWithTag("playerName").GetComponent<Text>();
-        _name.text = PhotonNetwork.playerName;
+        
 
     }
 
