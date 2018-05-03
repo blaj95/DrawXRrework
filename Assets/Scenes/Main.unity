@@ -541,8 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce543f9f9c6a94f932f63fd98acbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDrawer: 1
-  isSpectator: 0
+  isDrawer: 0
+  isSpectator: 1
   spawnArea: {fileID: 0}
   AutoConnect: 1
   Version: 1
@@ -915,7 +915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1609419863
 Transform:
   m_ObjectHideFlags: 0
