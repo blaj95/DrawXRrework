@@ -34,7 +34,7 @@ public class GuessResponse : Photon.MonoBehaviour {
             }
 
         scoretexts = GameObject.FindGameObjectsWithTag("Score");
-        foreach (GameObject go in texts)
+        foreach (GameObject go in scoretexts)
         {
             Text text = go.GetComponent<Text>();
             if (!arScoreText.Contains(text))
