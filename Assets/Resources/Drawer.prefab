@@ -988,6 +988,31 @@ MonoBehaviour:
   - Human
   - Tree
   - Computer
+  - Horse
+  - Hot Dog
+  - Hamburger
+  - Guitar
+  - Pizza
+  - Rocket Ship
+  - Shooting Star
+  - Thunder Storm
+  - Fire
+  - Train
+  - Car
+  - Spider
+  - Computer
+  - Circle
+  - Bed
+  - Ocean
+  - Kite
+  - Pants
+  - Shirt
+  - Rainbow
+  - Cube
+  - Spider Web
+  - Balloon
+  - Moon
+  - Soon
   topictext: {fileID: 114403545515545784}
 --- !u!114 &114748897978368470
 MonoBehaviour:
