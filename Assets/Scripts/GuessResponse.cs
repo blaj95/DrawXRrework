@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class GuessResponse : Photon.MonoBehaviour {
     public GameObject[] texts;
+    public GameObject[] scoretexts;
     public List<Text> arResponseText;
+    public List<Text> arScoreText;
     public string incorrect = "NOOOOOPE!";
     public string correct = "You got it!";
+
+    public int score;
     
     // Use this for initialization
 	void Start ()
@@ -28,13 +32,25 @@ public class GuessResponse : Photon.MonoBehaviour {
                 arResponseText.Add(text);
                 
             }
-        
-	}
+
+        scoretexts = GameObject.FindGameObjectsWithTag("Score");
+        foreach (GameObject go in texts)
+        {
+            Text text = go.GetComponent<Text>();
+            if (!arScoreText.Contains(text))
+                arScoreText.Add(text);
+
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "GotItButton")
+        {
             photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
+            score = score + 1;
+        }
 
         if (other.gameObject.tag == "WrongButton")
             photonView.RPC("WrongAnswer", PhotonTargets.All, incorrect);
@@ -70,6 +86,15 @@ public class GuessResponse : Photon.MonoBehaviour {
         foreach (Text te in arResponseText)
         {
             te.text = "";
+        }
+    }
+
+    [PunRPC]
+    public void AddScore()
+    {
+        foreach (Text te in arResponseText)
+        {
+            te.text = score.ToString();
         }
     }
 }
