@@ -50,6 +50,8 @@ public class GuessResponse : Photon.MonoBehaviour {
         {
             photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
             score = score + 1;
+            photonView.RPC("AddScore", PhotonTargets.All);
+            
         }
 
         if (other.gameObject.tag == "WrongButton")
@@ -92,7 +94,7 @@ public class GuessResponse : Photon.MonoBehaviour {
     [PunRPC]
     public void AddScore()
     {
-        foreach (Text te in arResponseText)
+        foreach (Text te in arScoreText)
         {
             te.text = score.ToString();
         }
