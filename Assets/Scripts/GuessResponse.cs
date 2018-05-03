@@ -12,7 +12,7 @@ public class GuessResponse : Photon.MonoBehaviour {
     public string incorrect = "NOOOOOPE!";
     public string correct = "You got it!";
 
-    public int score;
+    public int score = 0;
     
     // Use this for initialization
 	void Start ()
@@ -49,7 +49,7 @@ public class GuessResponse : Photon.MonoBehaviour {
         if(other.gameObject.tag == "GotItButton")
         {
             photonView.RPC("CorrectAnswer", PhotonTargets.All, correct);
-            score = score + 1;
+            score++;
             photonView.RPC("AddScore", PhotonTargets.All);
             
         }
